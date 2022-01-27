@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|bottom"
+    android:columnCount="4"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_columnSpan="4"
+        android:layout_columnWeight="1" />
+
+    <Button
+        android:id="@+id/ButtonC"
+        style="@style/actionButton"
+        android:text="@string/c"
+
+        />
+
+    <Button
+        android:id="@+id/ButtonDel"
+        style="@style/actionButton"
+        android:text="@string/del"
+
+        />
+
+    <Button
+        android:id="@+id/ButtonPercent"
+        style="@style/actionButton"
+        android:text="@string/percent"
+
+
+        />
+
+    <Button
+        android:id="@+id/ButtonDivide"
+        style="@style/actionButton"
+        android:text="@string/divide"
+
+
+        />
+
+    <Button
+        android:id="@+id/Button_7"
+        style="@style/button"
+        android:text="@string/_7"
+
+
+        />
+
+    <Button
+        android:id="@+id/Button_8"
+        style="@style/button"
+        android:text="@string/_8"
+
+        />
+
+    <Button
+        android:id="@+id/Button_9"
+        style="@style/button"
+        android:text="@string/_9"
+
+        />
+
+    <Button
+        android:id="@+id/ButtonMultiplication"
+        style="@style/actionButton"
+        android:text="@string/multiplication"
+
+        />
+
+    <Button
+        android:id="@+id/Button_4"
+        style="@style/button"
+        android:text="@string/_4"
+
+        />
+
+    <Button
+        android:id="@+id/Button_5"
+        style="@style/button"
+        android:text="@string/_5"
+
+        />
+
+    <Button
+        android:id="@+id/Button_6"
+        style="@style/button"
+        android:text="@string/_6"
+
+        />
+
+    <Button
+        android:id="@+id/ButtonMinus"
+        style="@style/actionButton"
+        android:text="@string/minus"
+
+        />
+
+    <Button
+        android:id="@+id/Button_1"
+        style="@style/button"
+        android:text="@string/_1"
+
+        />
+
+    <Button
+        android:id="@+id/Button_2"
+        style="@style/button"
+        android:text="@string/_2"
+
+        />
+
+    <Button
+        android:id="@+id/Button_3"
+        style="@style/button"
+        android:text="@string/_3"
+
+        />
+
+    <Button
+        android:id="@+id/ButtonPlus"
+        style="@style/actionButton"
+        android:text="@string/plus"
+
+        />
+
+    <Button
+        android:id="@+id/Button_0"
+        style="@style/button"
+        android:layout_column="1"
+        android:text="@string/_0"
+
+        />
+
+
+</GridLayout>
+
+
