@@ -5,45 +5,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center|bottom"
-    android:columnCount="4"
+    android:columnCount="5"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/text"
-        android:layout_columnSpan="4"
+        android:layout_columnSpan="5"
         android:layout_columnWeight="1"
-        android:textSize="@dimen/CalcButton"/>
-
-    <Button
-        android:id="@+id/buttonC"
-        style="@style/actionButton"
-        android:text="@string/c"
-
-        />
-
-    <Button
-        android:id="@+id/buttonDel"
-        style="@style/actionButton"
-        android:text="@string/del"
-
-        />
-
-    <Button
-        android:id="@+id/buttonPercent"
-        style="@style/actionButton"
-        android:text="@string/percent"
-
-
-        />
-
-    <Button
-        android:id="@+id/buttonDivide"
-        style="@style/actionButton"
-        android:text="@string/divide"
-
-
-        />
+        android:textSize="@dimen/CalcButton" />
 
     <Button
         android:id="@+id/button_7"
@@ -68,9 +38,17 @@
         />
 
     <Button
-        android:id="@+id/buttonMultiplication"
+        android:id="@+id/buttonDivide"
         style="@style/actionButton"
-        android:text="@string/multiplication"
+        android:text="@string/divide"
+
+
+        />
+
+    <Button
+        android:id="@+id/buttonC"
+        style="@style/actionButton"
+        android:text="@string/c"
 
         />
 
@@ -96,9 +74,16 @@
         />
 
     <Button
-        android:id="@+id/buttonMinus"
+        android:id="@+id/buttonMultiplication"
         style="@style/actionButton"
-        android:text="@string/minus"
+        android:text="@string/multiplication"
+
+        />
+
+    <Button
+        android:id="@+id/buttonDel"
+        style="@style/actionButton"
+        android:text="@string/del"
 
         />
 
@@ -124,9 +109,17 @@
         />
 
     <Button
-        android:id="@+id/buttonPlus"
+        android:id="@+id/buttonMinus"
         style="@style/actionButton"
-        android:text="@string/plus"
+        android:text="@string/minus"
+
+        />
+
+    <Button
+        android:id="@+id/buttonPercent"
+        style="@style/actionButton"
+        android:text="@string/percent"
+
 
         />
 
@@ -138,6 +131,15 @@
 
         />
 
+    <Button
+        android:id="@+id/buttonPlus"
+        style="@style/actionButton"
+        android:layout_column="3"
+        android:text="@string/plus"
+
+
+        />
+    
 
 </GridLayout>
 

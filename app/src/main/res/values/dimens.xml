@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="CalcButton">45sp</dimen>
+    <dimen name="CalcButton">35sp</dimen>
 </resources>
