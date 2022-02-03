@@ -137,6 +137,19 @@
         android:text="@string/_0"
 
         />
+    <Button
+        android:id="@+id/buttonPoint"
+        style="@style/button"
+        android:text="@string/Point"
+
+        />
+    <Button
+        android:id="@+id/buttonEquals"
+        style="@style/equalsButton"
+        android:layout_column="3"
+        android:text="@string/Equals"
+
+        />
 
 
 </GridLayout>

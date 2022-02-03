@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListParcelable implements Parcelable {
-    private List result = new ArrayList();
+    private List result = new ArrayList<Character>();
 
-    private ListParcelable(ArrayList<String> result) {
+    private ListParcelable(ArrayList<Character> result) {
         this.result = result;
     }
 
@@ -55,6 +55,10 @@ public class ListParcelable implements Parcelable {
 
     public void clearResult() {
         this.result.clear();
+    }
+
+    public int getSize(){
+        return this.result.size();
     }
 
     public void removeResult() {

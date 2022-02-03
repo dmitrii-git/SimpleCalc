@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
     private Button button_9;
     private Button buttonC;
     private Button buttonDell;
+    private Button buttonPercent;
+    private Button buttonDivide;
+    private Button buttonMultiplication;
+    private Button buttonMinus;
+    private Button buttonPlus;
+    private Button buttonEquals;
+    private Button buttonPoint;
+
 
     private List list = new ArrayList();
     private String result;
@@ -56,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
         button_9.setOnClickListener(listener);
         buttonC.setOnClickListener(listener);
         buttonDell.setOnClickListener(listener);
+        buttonDivide.setOnClickListener(listener);
+        buttonEquals.setOnClickListener(listener);
+        buttonMinus.setOnClickListener(listener);
+        buttonMultiplication.setOnClickListener(listener);
+        buttonPercent.setOnClickListener(listener);
+        buttonPlus.setOnClickListener(listener);
+        buttonPoint.setOnClickListener(listener);
+
     }
 
     private void initView() {
@@ -71,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
         button_9 = findViewById(R.id.button_9);
         buttonC = findViewById(R.id.buttonC);
         buttonDell = findViewById(R.id.buttonDel);
+        buttonPlus = findViewById(R.id.buttonPlus);
+        buttonPercent = findViewById(R.id.buttonPercent);
+        buttonMultiplication = findViewById(R.id.buttonMultiplication);
+        buttonMinus = findViewById(R.id.buttonMinus);
+        buttonDivide = findViewById(R.id.buttonDivide);
+        buttonEquals = findViewById(R.id.buttonEquals);
+        buttonPoint = findViewById(R.id.buttonPoint);
 
         text = findViewById(R.id.text);
 
@@ -85,62 +108,64 @@ public class MainActivity extends AppCompatActivity {
 
             switch (view.getId()) {
                 case (R.id.button_0): {
-                    listParcelable.adResult("0");
-                    result = TextUtils.join("", listParcelable.getResult());
-                    text.setText(result);
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) button_0.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
                     break;
 
                 }
                 case (R.id.button_1): {
-                    listParcelable.adResult("1");
+                    listParcelable.adResult((String) button_1.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_2): {
-                    listParcelable.adResult("2");
+                    listParcelable.adResult((String) button_2.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_3): {
-                    listParcelable.adResult("3");
+                    listParcelable.adResult((String) button_3.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_4): {
-                    listParcelable.adResult("4");
+                    listParcelable.adResult((String) button_4.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_5): {
-                    listParcelable.adResult("5");
+                    listParcelable.adResult((String) button_5.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_6): {
-                    listParcelable.adResult("6");
+                    listParcelable.adResult((String) button_6.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_7): {
-                    listParcelable.adResult("7");
+                    listParcelable.adResult((String) button_7.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_8): {
-                    listParcelable.adResult("8");
+                    listParcelable.adResult((String) button_8.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
                 }
                 case (R.id.button_9): {
-                    listParcelable.adResult("9");
+                    listParcelable.adResult((String) button_9.getText());
                     result = TextUtils.join("", listParcelable.getResult());
                     text.setText(result);
                     break;
@@ -156,6 +181,64 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(result);
                     break;
                 }
+                case (R.id.buttonDivide): {
+                    if (listParcelable.getSize() > 0) {
+                    listParcelable.adResult((String) buttonDivide.getText());
+                    result = TextUtils.join("", listParcelable.getResult());
+                    text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonMinus): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonMinus.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonMultiplication): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonMultiplication.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonPercent): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonPercent.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonPlus): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonPlus.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonEquals): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonEquals.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+                case (R.id.buttonPoint): {
+                    if (listParcelable.getSize() > 0) {
+                        listParcelable.adResult((String) buttonPoint.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
+                    }
+                    break;
+                }
+
+
 
 
             }
