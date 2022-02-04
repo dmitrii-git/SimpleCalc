@@ -1,46 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/YourApplicationTheme"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center|bottom"
-    android:columnCount="4"
+    android:columnCount="5"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/text"
-        android:layout_columnSpan="4"
+        android:layout_columnSpan="5"
         android:layout_columnWeight="1"
         android:textSize="@dimen/CalcButton" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonC"
-        android:text="@string/c"
 
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonDel"
-        android:text="@string/del"
-
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonPercent"
-        android:text="@string/percent"
-
-
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonDivide"
-        android:text="@string/divide"
-
-
-        />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
         style="@style/button"
         android:text="@string/_7"
@@ -49,6 +25,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_8"
         style="@style/button"
         android:text="@string/_8"
@@ -56,6 +33,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_9"
         style="@style/button"
         android:text="@string/_9"
@@ -63,8 +41,19 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonMultiplication"
-        android:text="@string/multiplication"
+
+        android:id="@+id/buttonDivide"
+        style="@style/actionButton"
+        android:text="@string/divide"
+
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonC"
+        style="@style/actionButton"
+        android:text="@string/c"
 
         />
 
@@ -94,8 +83,17 @@
 
     <com.google.android.material.button.MaterialButton
 
-        android:id="@+id/buttonMinus"
-        android:text="@string/minus"
+        android:id="@+id/buttonMultiplication"
+        style="@style/actionButton"
+        android:text="@string/multiplication"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonDel"
+        style="@style/actionButton"
+        android:text="@string/del"
 
         />
 
@@ -125,8 +123,18 @@
 
     <com.google.android.material.button.MaterialButton
 
-        android:id="@+id/buttonPlus"
-        android:text="@string/plus"
+        android:id="@+id/buttonMinus"
+        style="@style/actionButton"
+        android:text="@string/minus"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonPercent"
+        style="@style/actionButton"
+        android:text="@string/percent"
+
 
         />
 
@@ -137,10 +145,12 @@
         android:text="Theme"
 
         />
+
     <com.google.android.material.button.MaterialButton
 
         android:id="@+id/button_0"
         style="@style/button"
+        android:layout_column="1"
         android:text="@string/_0"
 
         />
@@ -155,9 +165,17 @@
 
     <com.google.android.material.button.MaterialButton
 
+        android:id="@+id/buttonPlus"
+        style="@style/actionButton"
+        android:text="@string/plus"
+
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonEquals"
         style="@style/equalsButton"
-        android:layout_column="3"
         android:text="@string/Equals"
 
         />
