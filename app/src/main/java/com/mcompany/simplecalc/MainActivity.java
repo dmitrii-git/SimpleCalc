@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonTheme;
 
     private String result;
-    private int A = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
