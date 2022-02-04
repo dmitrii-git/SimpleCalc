@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/YourApplicationTheme"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center|bottom"
@@ -15,7 +15,8 @@
         android:layout_columnWeight="1"
         android:textSize="@dimen/CalcButton" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_7"
         style="@style/button"
         android:text="@string/_7"
@@ -23,21 +24,24 @@
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_8"
         style="@style/button"
         android:text="@string/_8"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_9"
         style="@style/button"
         android:text="@string/_9"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonDivide"
         style="@style/actionButton"
         android:text="@string/divide"
@@ -45,77 +49,88 @@
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonC"
         style="@style/actionButton"
         android:text="@string/c"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_4"
         style="@style/button"
         android:text="@string/_4"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_5"
         style="@style/button"
         android:text="@string/_5"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_6"
         style="@style/button"
         android:text="@string/_6"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonMultiplication"
         style="@style/actionButton"
         android:text="@string/multiplication"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonDel"
         style="@style/actionButton"
         android:text="@string/del"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_1"
         style="@style/button"
         android:text="@string/_1"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_2"
         style="@style/button"
         android:text="@string/_2"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_3"
         style="@style/button"
         android:text="@string/_3"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonMinus"
         style="@style/actionButton"
         android:text="@string/minus"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonPercent"
         style="@style/actionButton"
         android:text="@string/percent"
@@ -123,7 +138,16 @@
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonTheme"
+        style="@style/themeButton"
+        android:text="Theme"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/button_0"
         style="@style/button"
         android:layout_column="1"
@@ -131,14 +155,16 @@
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonPoint"
         style="@style/button"
         android:text="@string/Point"
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonPlus"
         style="@style/actionButton"
         android:text="@string/plus"
@@ -146,7 +172,8 @@
 
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+
         android:id="@+id/buttonEquals"
         style="@style/equalsButton"
         android:text="@string/Equals"

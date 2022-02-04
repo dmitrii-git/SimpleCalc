@@ -3,16 +3,17 @@ package com.mcompany.simplecalc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String PREF_NAME = "key_pref";
+    private static final String PREF_THEME_KEY = "key_pref_theme";
     private ListParcelable listParcelable = new ListParcelable();
 
 
@@ -36,15 +37,15 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonPlus;
     private Button buttonEquals;
     private Button buttonPoint;
+    private Button buttonTheme;
 
-
-    private List list = new ArrayList();
     private String result;
-
+    private int A = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         initView();
         getSupportActionBar().hide();
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPercent.setOnClickListener(listener);
         buttonPlus.setOnClickListener(listener);
         buttonPoint.setOnClickListener(listener);
+        buttonTheme.setOnClickListener(listener);
 
     }
 
@@ -94,13 +96,15 @@ public class MainActivity extends AppCompatActivity {
         buttonDivide = findViewById(R.id.buttonDivide);
         buttonEquals = findViewById(R.id.buttonEquals);
         buttonPoint = findViewById(R.id.buttonPoint);
+        buttonTheme = findViewById(R.id.buttonTheme);
 
         text = findViewById(R.id.text);
+
 
     }
 
 
-    View.OnClickListener listener = new View.OnClickListener() {
+    final View.OnClickListener listener = new View.OnClickListener() {
 
 
         @Override
@@ -183,9 +187,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 case (R.id.buttonDivide): {
                     if (listParcelable.getSize() > 0) {
-                    listParcelable.adResult((String) buttonDivide.getText());
-                    result = TextUtils.join("", listParcelable.getResult());
-                    text.setText(result);
+                        listParcelable.adResult((String) buttonDivide.getText());
+                        result = TextUtils.join("", listParcelable.getResult());
+                        text.setText(result);
                     }
                     break;
                 }
@@ -237,8 +241,33 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                 }
+                case (R.id.buttonTheme): {
+                    switch (getAppTheme()) {
+                        case (R.style.Theme_SimpleCalc): {
+                            setAppTheme(R.style.YourApplicationThemeGreen);
+                            recreate();
+                            break;
+                        }
+                        case (R.style.YourApplicationThemeGreen): {
+                            setAppTheme(R.style.YourApplicationThemeBlue);
+                            recreate();
+                            break;
+                        }
+                        case (R.style.YourApplicationThemeBlue): {
+                            setAppTheme(R.style.YourApplicationThemeRed);
+                            recreate();
+                            break;
+                        }
+                        case (R.style.YourApplicationThemeRed): {
+                            setAppTheme(R.style.Theme_SimpleCalc);
+                            recreate();
+                            break;
+                        }
 
 
+                    }
+                    break;
+                }
 
 
             }
@@ -260,6 +289,20 @@ public class MainActivity extends AppCompatActivity {
         result = TextUtils.join("", listParcelable.getResult());
         text.setText(result);
     }
+
+    protected void setAppTheme(int codeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(PREF_THEME_KEY, codeStyle);
+        editor.apply();
+    }
+
+    protected int getAppTheme() {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPref.getInt(PREF_THEME_KEY, R.style.Theme_SimpleCalc);
+    }
+
+
 }
 
 
